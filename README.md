@@ -13,7 +13,12 @@ This repository aims to offer practical applications for 2D medical image synthe
 2. Evaluation algorithms, including computation of our fidelity (FID, precision) and variety (recall, average file size). These algorithms were derived and revised from ![pytorch-fid](https://github.com/mseitzer/pytorch-fid), ![generative-evaluation-prdc](https://github.com/clovaai/generative-evaluation-prdc).
 
 
-# Usage
-The implementation details can be found in the "synthesizer" folder.
 
-To evaluate the quality of synthetic data, please refer to 
+# Usage
+The implementation details can be found in the ![image_synthesizer](./image_synthesizer/details.md) folder.
+
+To assess the quality of synthetic data, you will need to prepare two folders. One folder should contain the reference real images, and the other should contain the synthetic images to be evaluated. Then, call the following function
+```
+python ./quality_evaluator/main.py -i /path/to/synthetic/images -r /path/to/real/images -o /path/for/outputs
+```
+
